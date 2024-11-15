@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations using functions</title>
+    <script>
+        function performArithmeticOperation() {
+            
+            const num1 = 4;
+            const num2 = 5;
+            const operator = document.getElementById('operator').value;
+
+            let result;
+
+          
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        alert("Error: Division by zero is not allowed.");
+                        return;
+                    }
+                    break;
+                default:
+                    alert("Error: Invalid operator.");
+                    return;
+            }
+
+            
+            alert(`Result: ${result}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Test 8</h1>
+    <h2>Arithmetic Operations using javascript Functions </h2>
+    <p>Select an operator, then click the button to perform the operation with numbers 4 and 5.</p>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">%</option>
+    </select>
+    <button onclick="performArithmeticOperation()">Calculate</button>
+</body>
+</html>
