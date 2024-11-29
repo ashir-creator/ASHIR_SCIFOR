@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test 4 Form using Foundation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites/dist/js/foundation.min.js" defer></script>
+  <style>
+    body {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form Validation</h2>
+        <form data-abide novalidate>
+      
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+             
+              <div class="medium-12 cell">
+                <label>Name
+                  <input type="text" placeholder="Enter your full name" required pattern="^[a-zA-Z\s]+$">
+                  <span class="form-error">
+                    Enter a valid name.
+                  </span>
+                </label>
+              </div>
+      
+              
+              <div class="medium-12 cell">
+                <label>Email
+                  <input type="email" placeholder="Enter your email" required>
+                  <span class="form-error">
+                    Enter a valid email address.
+                  </span>
+                </label>
+              </div>
+
+              <div class="medium-12 cell">
+                <label>Phone
+                  <input type="tel" placeholder="Enter your phone number" pattern="[0-9]{10}" required maxlength="10">
+                  <span class="form-error">
+                    Enter a valid phone number
+                  </span>
+                </label>
+              </div>
+      
+              
+              <div class="medium-12 cell">
+                <label>Password
+                  <input type="password" placeholder="Enter password" required minlength="8">
+                  <span class="form-error">
+                    Password must be strong enough.
+                  </span>
+                </label>
+              </div>
+      
+             
+      
+              <div class="medium-12 cell">
+                <button type="submit" class="button primary expanded">Submit</button>
+              </div>
+            </div>
+          </div>
+
+          
+      
+        </form>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation(); 
+    </script>
+  </body>
+</html>
