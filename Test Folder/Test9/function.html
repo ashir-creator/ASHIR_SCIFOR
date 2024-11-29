@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse and Sort Array</title>
+    <script>
+        let reversedArray = [];
+
+        function reverseArray() {
+         
+            let input = document.getElementById('inputArray').value;
+            let charArray = input.split(',');
+            charArray = charArray.map(char => char.trim());
+            reversedArray = charArray.reverse();
+            document.getElementById('result').innerText = 'Reversed Array: ' + reversedArray.join(', ');
+        }
+
+        function sortReversedArray() {
+            if (reversedArray.length === 0) {
+                alert("Please reverse the array first.");
+                return;
+            }
+             let sortedArray = reversedArray.sort();
+             document.getElementById('result').innerText = 'Sorted Reversed Array: ' + sortedArray.join(', ');
+        }
+    </script>
+</head>
+
+<body>
+   <h1>Reverse and Sort Array of Characters</h1>
+    <label for="inputArray">Enter characters :</label>
+    <input type="text" id="inputArray" placeholder="e.g., a,b,c,d">
+    <div>
+        <button onclick="reverseArray()">Reverse Array</button>
+        <button onclick="sortReversedArray()">Sort Reversed Array</button>
+    </div>
+    <div id="result"></div>
+</body>
+</html>
