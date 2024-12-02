@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .item {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100px;
+            order: 2;
+            align-self: flex-start;
+            background: #009879;
+            padding: 20px;
+            margin: 10px;
+            color: white;
+            font-size: 1.5em;
+            text-align: center;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Monkey</div>
+        <div class="item">Horse</div>
+        <div class="item">Lion</div>
+        <div class="item">Tiger</div>
+    </div>
+</body>
+</html>
