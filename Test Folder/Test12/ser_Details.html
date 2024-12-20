@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test 12 User Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: skyblue;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .user-details {
+      background-color:lightblue;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .user-details p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .user-details p span {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <!-- React and ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Your custom React code -->
+  <script type="text/babel">
+
+    const UserDetails = ({ name, age, email, mobileNo, city }) => {
+      return (
+        <div className="user-details">
+          <p><span>Name:</span> {name}</p>
+          <p><span>Age:</span> {age}</p>
+          <p><span>Email:</span> {email}</p>
+          <p><span>Mobile No:</span> {mobileNo}</p>
+          <p><span>City:</span> {city}</p>
+        </div>
+      );
+    };
+
+    const App = () => {
+      return (
+        <div className="container">
+          <UserDetails 
+            name="Md Ashir Khan" 
+            age={21} 
+            email="mdashirkhan11@example.com" 
+            mobileNo="6289755990" 
+            city="Kolkata" 
+          />
+          <UserDetails 
+            name="user2" 
+            age={25} 
+            email="user@example.com" 
+            mobileNo="098-765-4321" 
+            city="Kolkata" 
+          />
+          <UserDetails 
+            name="user3" 
+            age={28} 
+            email="user@example.com" 
+            mobileNo="555-123-4567" 
+            city="Bangalore" 
+          />
+        </div>
+      );
+    };
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+
+  </script>
+</body>
+</html>
